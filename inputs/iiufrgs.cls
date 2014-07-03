@@ -91,7 +91,7 @@
 \RequirePackage{natbib}
 
 \RequirePackage[%
-        bookmarksnumbered=true,	
+        bookmarksnumbered=true,
         breaklinks=true,
         unicode=true,
 %
@@ -277,7 +277,7 @@
                 \vfill
         }
         \centerline{\@city}
-				\centerline{\ii@date}				
+				\centerline{\ii@date}
 }
 \def\@topbox{%
         \parbox[t]{\textwidth}{%
@@ -367,7 +367,7 @@
 
 
 %==============================================================================
-% Ajuste do sumário (nada indentado) 
+% Ajuste do sumário (nada indentado)
 %==============================================================================
 \newlength{\ii@chapnumindent}\setlength{\ii@chapnumindent}{1.8em}
 \renewcommand*{\l@chapter}[2]{
@@ -395,6 +395,37 @@
 \renewcommand{\tableofcontents}{%
         \chapter*{\contentsname}
         \@starttoc{toc}\@aftertoctrue%
+}
+
+%==============================================================================
+% Definição das listas de figuras e tabelas
+%==============================================================================
+\renewcommand\listoffigures{%
+        \if@twocolumn
+                \@restonecoltrue\onecolumn
+        \else
+                \@restonecolfalse
+        \fi
+        \chapter*{\listfigurename}%
+        \addcontentsline{toc}{chapter}{\listfigurename}
+        \@mkboth{\MakeUppercase\listfigurename}%
+                {\MakeUppercase\listfigurename}%
+        \@starttoc{lof}%
+        \if@restonecol\twocolumn\fi
+}
+\renewcommand\listoftables{%
+        \if@twocolumn
+                \@restonecoltrue\onecolumn
+        \else
+                \@restonecolfalse
+        \fi
+        \chapter*{\listtablename}%
+        \addcontentsline{toc}{chapter}{\listtablename}
+        \@mkboth{%
+                \MakeUppercase\listtablename}%
+                {\MakeUppercase\listtablename}%
+        \@starttoc{lot}%
+        \if@restonecol\twocolumn\fi
 }
 
 %==============================================================================
@@ -573,7 +604,7 @@
 %==============================================================================
 % Ajuste do formato das citações e referências
 %==============================================================================
-%\setlength{\bibhang}{0pt} 
+%\setlength{\bibhang}{0pt}
 %\let\cite\citep %Linhas desativadas pelo Valdez, faziam o layout nunca ter parenteses
 
 %
@@ -592,3 +623,4 @@
 \newenvironment{agradecimentos}{
 	\chapter*{Agradecimentos}
 }{}
+
