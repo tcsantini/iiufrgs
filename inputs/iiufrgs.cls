@@ -433,6 +433,7 @@
 %==============================================================================
 \newenvironment{listofabbrv}[1]{
         \chapter*{\listabbrvname}
+        \addcontentsline{toc}{chapter}{\listabbrvname}
         \begin{list}{\textbf{??}}{
                 \settowidth{\labelwidth}{#1}
                 \setlength{\labelsep}{1em}
@@ -448,6 +449,7 @@
 }
 \newenvironment{listofsymbols}[1]{
         \chapter*{\listsymbolname}
+        \addcontentsline{toc}{chapter}{\listsymbolname}
         \begin{list}{\textbf{??}}{
                 \settowidth{\labelwidth}{#1}
                 \setlength{\labelsep}{1em}
@@ -467,6 +469,7 @@
 %==============================================================================
 \renewenvironment{abstract}{%
         \chapter*{\abstractname}
+        \addcontentsline{toc}{chapter}{\abstractname}
 }{%
         \par\vfill
         \noindent\textbf{\keywordsname:} \@abstractkw.
