@@ -75,7 +75,7 @@
 \RequirePackage{keyval}
 \RequirePackage{fixltx2e}
 
-\RequirePackage{subfig}
+\RequirePackage{caption}
 
 \RequirePackage[english,brazilian]{babel}
 \input{brazilian.babel}
@@ -91,7 +91,7 @@
 \RequirePackage{natbib}
 
 \RequirePackage[%
-        bookmarksnumbered=true,	
+        bookmarksnumbered=true,
         breaklinks=true,
         unicode=true,
 %
@@ -277,7 +277,7 @@
                 \vfill
         }
         \centerline{\@city}
-				\centerline{\ii@date}				
+				\centerline{\ii@date}
 }
 \def\@topbox{%
         \parbox[t]{\textwidth}{%
@@ -367,7 +367,7 @@
 
 
 %==============================================================================
-% Ajuste do sumário (nada indentado) 
+% Ajuste do sumário (nada indentado)
 %==============================================================================
 \newlength{\ii@chapnumindent}\setlength{\ii@chapnumindent}{1.8em}
 \renewcommand*{\l@chapter}[2]{
@@ -573,7 +573,7 @@
 %==============================================================================
 % Ajuste do formato das citações e referências
 %==============================================================================
-%\setlength{\bibhang}{0pt} 
+%\setlength{\bibhang}{0pt}
 %\let\cite\citep %Linhas desativadas pelo Valdez, faziam o layout nunca ter parenteses
 
 %
