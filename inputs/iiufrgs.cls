@@ -348,7 +348,7 @@
                 \@title\ / \@authora.\ -- \@city: \nomeDoProgramaPG~da~UFRGS, \@publyear.\par
                 \pageref{LastPage}~f.: il.\par
                 \@cipspecificinfo\ -- \ufrgs. \@course, \@city, BR--\@state, \@publyear. \advisorname: \@advisorfirst\ \@advisorlast\@ifundefined{@coadvisor}{}{; \coadvisorname: \@coadvisorfirst\ \@coadvisorlast}.\par
-                \@cipkw I.~\@advisorlast, \@advisorfirst. \@ifundefined{@coadvisorfirst}{II.~T\'{\i}tulo.}{II.~\@coadvisorlast, \@coadvisorfirst. III.~T\'{\i}tulo.}\\
+                \@cipkw I.~\@advisorlast, \@advisorfirst.  \@ifundefined{@coadvisorfirst}{II.~\@title.}{II.~\@coadvisorlast, \@coadvisorfirst. III.~\@title.}\\
                 \vspace{0.2ex}
         \end{minipage}%
         }%
